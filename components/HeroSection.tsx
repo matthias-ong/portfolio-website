@@ -4,13 +4,31 @@ import Link from "next/link"
 import Image from "next/image"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 import { motion } from "framer-motion"
+import { useState, useEffect } from "react"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0 },
 }
 
+const FULL_NAME = "Matthias Ong"
+
 export default function HeroSection() {
+  const [displayed, setDisplayed] = useState("")
+  const [done, setDone] = useState(false)
+
+  useEffect(() => {
+    let i = 0
+    const interval = setInterval(() => {
+      setDisplayed(FULL_NAME.slice(0, i + 1))
+      i++
+      if (i === FULL_NAME.length) {
+        clearInterval(interval)
+        setDone(true)
+      }
+    }, 100)
+    return () => clearInterval(interval)
+  }, [])
   return (
     <div className="flex flex-1 flex-col items-center justify-center px-6 py-24">
       <motion.div
@@ -26,6 +44,7 @@ export default function HeroSection() {
             width={112}
             height={112}
             className="mx-auto mb-6 rounded-full object-cover ring-2 ring-blue-200 dark:ring-blue-900"
+            style={{ width: 112, height: 112 }}
             priority
           />
         </motion.div>
@@ -34,21 +53,30 @@ export default function HeroSection() {
           variants={fadeUp}
           className="mb-3 text-sm font-medium uppercase tracking-widest text-blue-500"
         >
-          AI &amp; Full-Stack Engineer
+          Software Developer
         </motion.p>
 
         <motion.h1
           variants={fadeUp}
           className="mb-6 text-5xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-6xl"
         >
-          Matthias Ong
+          {displayed}
+          {!done && (
+            <motion.span
+              animate={{ opacity: [1, 0] }}
+              transition={{ duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
+              className="ml-1 inline-block text-blue-500"
+            >
+              |
+            </motion.span>
+          )}
         </motion.h1>
 
         <motion.p
           variants={fadeUp}
           className="mb-10 text-lg leading-relaxed text-zinc-600 dark:text-zinc-400"
         >
-          I build AI-powered tools mostly to solve problems I've run into myself. Final year IT student, moving to Perth.
+          I build web apps and AI-powered tools for myself and clients. Final year IT student, based in Perth. Currently looking for work.
         </motion.p>
 
         <motion.div

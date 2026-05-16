@@ -18,9 +18,10 @@ export default function AboutPage() {
         <Image
           src="/headshot.jpg"
           alt="Matthias Ong"
-          width={80}
-          height={80}
+          width={120}
+          height={120}
           className="rounded-full object-cover ring-2 ring-blue-200 dark:ring-blue-900"
+          style={{ width: 120, height: 120 }}
         />
         <div>
           <h1 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
@@ -53,23 +54,14 @@ export default function AboutPage() {
       {/* Bio */}
       <div className="mb-10 space-y-4 text-zinc-600 dark:text-zinc-400">
         <p>
-          I&apos;m a CS student based in Perth, finishing up my degree in Melbourne and building AI-powered tools along the way. I tend to start with a problem I&apos;ve run into myself —
-          Alignr came out of getting frustrated with manually tailoring resumes for every
-          job application.
+          I&apos;m a CS/IT student, finishing up my degree in Melbourne before moving to Perth. I love building AI-powered tools and web apps along the way.
+        </p>
+        <p>
+          I&apos;m drawn to startups and early-stage products. Genuinely a tech nerd :P I get unreasonably excited about new frameworks, tools, and rabbit holes.
         </p>
         <p>
           Outside of personal projects, I&apos;ve led teams doing technical work for
-          real clients in uni. Most recently I led a 5-person team delivering a FastAPI analytics
-          dashboard and React Native app for a Melbourne edtech startup serving 6,000+
-          students.
-        </p>
-        <p>
-          I&apos;m drawn to startups and early-stage products, the kind of work where
-          what you ship this week matters next week.
-        </p>
-        <p>
-          Genuinely a tech nerd :P I get unreasonably excited about new frameworks, tools,
-          and rabbit holes.
+          real clients at a club in uni.
         </p>
       </div>
 
@@ -79,7 +71,7 @@ export default function AboutPage() {
           Currently
         </h2>
         <ul className="space-y-1 text-sm text-zinc-600 dark:text-zinc-400">
-          <li>- Finishing my CS degree</li>
+          <li>- Finishing my IT degree</li>
           <li>- Open to grad roles and freelance work in Perth (and remote)</li>
         </ul>
       </div>
