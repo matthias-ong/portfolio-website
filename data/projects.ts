@@ -43,6 +43,7 @@ export const projects: Project[] = [
       "Led a 5-member team contracted to deliver key technical components for an edtech startup serving 6,000+ students. Personally built a FastAPI analytics dashboard with an idempotent data pipeline integrating the Wonde API with PostgreSQL across 1,000+ student and school records. The team also delivered a companion React Native mobile app prototype.",
     tags: ["React", "FastAPI", "PostgreSQL", "Wonde API", "LLM", "React Native"],
     images: [
+      "/images/studypulse/StudyPulse_Logo.png",
       "/images/studypulse/StudyPulse_Main.png",
       "/images/studypulse/StudyPulse_Wonde_Integration.png",
       "/images/studypulse/StudyPulse_Mobile_1.png",
