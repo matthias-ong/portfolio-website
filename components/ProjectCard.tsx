@@ -22,9 +22,14 @@ function ProjectImage({ project }: { project: Project }) {
     return (
       <video
         src={project.video}
+        autoPlay
         muted
         playsInline
         preload="metadata"
+        onTimeUpdate={(e) => {
+          const v = e.currentTarget
+          if (v.currentTime > 4) v.currentTime = 0
+        }}
         className="h-full w-full object-cover"
       />
     )
