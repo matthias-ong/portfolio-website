@@ -38,6 +38,8 @@ export default function ImageCarousel({ images, alt, captions }: { images: strin
           className="object-contain"
           sizes="(max-width: 768px) 100vw, 50vw"
           priority={current === 0}
+          placeholder="blur"
+          blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxJyBoZWlnaHQ9JzEnPjxyZWN0IHdpZHRoPScxJyBoZWlnaHQ9JzEnIGZpbGw9JyMwYTBhMGYnLz48L3N2Zz4="
         />
 
         {images.length > 1 && (
