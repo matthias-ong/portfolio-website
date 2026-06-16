@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { useState, useEffect } from "react"
 
-export default function ImageCarousel({ images, alt }: { images: string[]; alt: string }) {
+export default function ImageCarousel({ images, alt, captions }: { images: string[]; alt: string; captions?: string[] }) {
   const [current, setCurrent] = useState(0)
   const [expanded, setExpanded] = useState(false)
 
@@ -20,6 +20,8 @@ export default function ImageCarousel({ images, alt }: { images: string[]; alt: 
     window.addEventListener("keydown", onKey)
     return () => window.removeEventListener("keydown", onKey)
   }, [expanded, images.length])
+
+  const caption = captions?.[current]
 
   return (
     <>
@@ -67,9 +69,20 @@ export default function ImageCarousel({ images, alt }: { images: string[]; alt: 
                 />
               ))}
             </div>
+
+            <span className="absolute right-2 top-2 rounded-full bg-black/50 px-2 py-0.5 text-xs text-white/70 backdrop-blur-sm">
+              {current + 1} / {images.length}
+            </span>
           </>
         )}
       </div>
+
+      {/* Caption bar */}
+      {caption && (
+        <div className="flex items-center justify-between bg-zinc-900 px-4 py-2">
+          <span className="text-xs text-zinc-400">{caption}</span>
+        </div>
+      )}
 
       {/* Lightbox */}
       {expanded && (

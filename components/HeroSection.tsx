@@ -90,10 +90,10 @@ export default function HeroSection() {
             See my work
           </Link>
           <Link
-            href="/blog"
-            className="rounded-full border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-700 transition-colors hover:border-zinc-400 hover:bg-zinc-50 dark:border-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-900"
+            href="/contact"
+            className="rounded-full border border-zinc-700 px-6 py-3 text-sm font-semibold text-zinc-300 transition-colors hover:border-zinc-500 hover:bg-zinc-900"
           >
-            Read blog
+            Get in touch
           </Link>
         </motion.div>
 
@@ -111,7 +111,7 @@ export default function HeroSection() {
             <FaGithub size={22} />
           </a>
           <a
-            href="https://www.linkedin.com/in/matthias-ongse/"
+            href="http://linkedin.com/in/matthias-ongse"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"

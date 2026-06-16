@@ -1,63 +1,101 @@
+import Link from "next/link"
+import Image from "next/image"
 import { type Project } from "@/data/projects"
-import ImageCarousel from "@/components/ImageCarousel"
 import { FaGithub } from "react-icons/fa"
 import { HiExternalLink } from "react-icons/hi"
 
+function ProjectImage({ project }: { project: Project }) {
+  if (project.images.length > 0 && !project.images[0].endsWith(".svg")) {
+    return (
+      <Image
+        src={project.images[0]}
+        alt={`${project.title} screenshot`}
+        fill
+        className="object-cover transition-transform duration-500 group-hover:scale-105"
+        sizes="(max-width: 768px) 100vw, 33vw"
+      />
+    )
+  }
+  if (project.video) {
+    return (
+      <video
+        src={project.video}
+        muted
+        playsInline
+        preload="metadata"
+        className="h-full w-full object-cover"
+      />
+    )
+  }
+  return (
+    <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-zinc-800 to-zinc-900">
+      <span className="text-2xl font-bold text-zinc-600">{project.title[0]}</span>
+    </div>
+  )
+}
+
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="flex flex-col overflow-hidden rounded-2xl border border-zinc-200 bg-white transition-shadow hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900">
-      <ImageCarousel images={project.images} alt={project.title} />
+    <Link href={`/projects/${project.slug}`} className="group block">
+      <article className="flex h-[400px] flex-col overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900 transition-all duration-300 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10">
 
-      <div className="flex flex-1 flex-col gap-3 p-6">
-        <div className="flex items-start justify-between gap-4">
-          {project.demo ? (
-            <a
-              href={project.demo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-1.5 text-lg font-semibold text-zinc-900 hover:text-zinc-600 dark:text-zinc-50 dark:hover:text-zinc-300"
-            >
-              {project.title}
-              <HiExternalLink size={15} className="opacity-40 transition-opacity group-hover:opacity-100" />
-            </a>
-          ) : (
-            <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
-              {project.title}
-            </h2>
+        {/* Image */}
+        <div className="relative h-44 w-full shrink-0 overflow-hidden bg-zinc-800">
+          <ProjectImage project={project} />
+          {project.categories.includes("Client Work") && (
+            <span className="absolute left-3 top-3 rounded-full bg-yellow-400 px-2.5 py-0.5 text-xs font-semibold text-zinc-900">
+              Client
+            </span>
           )}
-          <span className="shrink-0 text-xs text-zinc-400">{project.period}</span>
         </div>
 
-        <p className="text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-          {project.description}
-        </p>
-
-        <ul className="mt-auto flex flex-wrap gap-2 pt-2">
-          {project.tags.map((tag) => (
-            <li
-              key={tag}
-              className="rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-medium text-blue-600 dark:bg-blue-950 dark:text-blue-400"
-            >
-              {tag}
-            </li>
-          ))}
-        </ul>
-
-        {project.github && (
-          <div className="pt-1">
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub repository"
-              className="inline-flex items-center gap-1.5 text-xs font-medium text-zinc-400 transition-colors hover:text-zinc-900 dark:hover:text-zinc-50"
-            >
-              <FaGithub size={14} />
-              GitHub
-            </a>
+        {/* Content */}
+        <div className="flex flex-1 flex-col gap-1.5 p-4">
+          <div className="flex items-start justify-between gap-3">
+            <h2 className="text-sm font-semibold leading-snug text-zinc-50 group-hover:text-blue-400 transition-colors">
+              {project.title}
+            </h2>
+            <span className="shrink-0 text-xs text-zinc-500">{project.period}</span>
           </div>
-        )}
-      </div>
-    </article>
+
+          <p className="line-clamp-3 text-xs leading-relaxed text-zinc-400">
+            {project.description}
+          </p>
+
+          <div className="mt-auto flex flex-wrap gap-1.5">
+            {project.skills.slice(0, 4).map((skill) => (
+              <span
+                key={skill}
+                className="rounded-full bg-blue-950/60 px-2 py-0.5 text-xs font-medium text-blue-400"
+              >
+                {skill}
+              </span>
+            ))}
+            {project.skills.length > 4 && (
+              <span className="rounded-full bg-zinc-800 px-2 py-0.5 text-xs text-zinc-500">
+                +{project.skills.length - 4}
+              </span>
+            )}
+          </div>
+
+          {(project.github || project.demo) && (
+            <div className="mt-2 flex items-center gap-3">
+              {project.github && (
+                <span className="inline-flex items-center gap-1 text-xs text-zinc-500">
+                  <FaGithub size={12} />
+                  GitHub
+                </span>
+              )}
+              {project.demo && (
+                <span className="inline-flex items-center gap-1 text-xs text-emerald-500">
+                  <HiExternalLink size={13} />
+                  Live
+                </span>
+              )}
+            </div>
+          )}
+        </div>
+      </article>
+    </Link>
   )
 }
