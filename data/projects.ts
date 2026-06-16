@@ -153,11 +153,12 @@ export const projects: Project[] = [
       "/images/trailquest/browse2.png",
       "/images/trailquest/checkpoints.png",
       "/images/trailquest/quiz_challenge.png",
+      "/images/trailquest/trail_completed.png",
       "/images/trailquest/leaderboard.png",
       "/images/trailquest/community.png",
       "/images/trailquest/detail_card.png",
     ],
-    github: "https://github.com/matthias-ong/TrailQuest/tree/main",
+    github: "https://github.com/matthias-ong/TrailQuest/",
     featured: true,
   },
   {
