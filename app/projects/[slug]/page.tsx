@@ -68,7 +68,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             src={project.video}
             controls
             className="w-full"
-            preload="none"
+            preload="metadata"
           />
         </div>
       )}
