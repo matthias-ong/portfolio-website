@@ -178,6 +178,27 @@ export const projects: Project[] = [
 
   // --- Data / AI/ML ---
   {
+    slug: "apparel-market-research",
+    title: "The Little Mustard - Market Research Dashboard",
+    period: "Jun 2026",
+    role: "Solo developer",
+    description:
+      "Built a multi-page Power BI dashboard for The Little Mustard, a faith-based apparel brand, using 146 survey responses as the core dataset. The main challenge was that multi-select questions store comma-separated answers in a single cell, so I cleaned these in Power Query by splitting into rows, bucketing free-text entries, and unpivoting rating columns. Wrote DAX measures to handle the row duplication that splitting creates, so counts and averages reflect actual respondents rather than inflated rows. Also rebuilt the brand's Etsy profit calculator as a live DAX measure chain against lookup tables, with What-if parameters for price, shipping, and exchange rate that update every card instantly as you change slicers, replacing a static spreadsheet. A third page visualises the free-text survey responses as a word cloud with stop-word filtering to surface the themes that actually matter.",
+    skills: ["Power BI", "DAX", "Power Query", "Data Visualisation", "Excel", "Market Research", "ETL"],
+    categories: ["Data"],
+    images: [
+      "/images/powerbi/survey_insights.png",
+      "/images/powerbi/word_cloud.png",
+      "/images/powerbi/profit_calculator.png",
+    ],
+    captions: [
+      "Survey insights — style preferences, aesthetics, fit, and price band across 146 respondents",
+      "Word cloud — free-text responses cleaned and stop-word filtered",
+      "Live profit calculator — DAX measures with What-if parameters for price, shipping, and exchange rate",
+    ],
+    featured: false,
+  },
+  {
     slug: "spatial-site-selection",
     title: "Spatial Site-Selection Database",
     period: "Mar – Jun 2026",

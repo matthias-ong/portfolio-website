@@ -9,7 +9,7 @@ interface Point {
 }
 
 const TRAIL_MS = 280
-const GLOW_RADIUS = 150
+const GLOW_RADIUS = 220
 const GLOW_ALPHA = 0.18
 
 export default function CursorGlow() {
