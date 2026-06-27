@@ -3,7 +3,7 @@ import Link from "next/link"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 
 export const metadata = {
-  title: "About — Matthias Ong",
+  title: "About - Matthias Ong",
   description: "AI and full-stack engineer based in Perth, graduating soon and open to grad roles and freelance work.",
 }
 
@@ -54,14 +54,13 @@ export default function AboutPage() {
       {/* Bio */}
       <div className="mb-10 space-y-4 text-zinc-600 dark:text-zinc-400">
         <p>
-          I&apos;m a CS/IT student, finishing up my degree in Melbourne before moving to Perth. I love building AI-powered tools and web apps along the way.
+          I&apos;m a CS/IT student, finishing up my degree in Melbourne before moving to Perth. I love building AI-powered tools and full-stack apps along the way.
         </p>
         <p>
-          I&apos;m drawn to startups and early-stage products. Genuinely a tech nerd :P I get unreasonably excited about new frameworks, tools, and rabbit holes.
+          I&apos;m drawn to startups, early-stage products, and cool ideas, although I&apos;m open to wherever good work is happening. Genuinely a tech nerd :P I get excited about new frameworks, tools, and rabbit holes.
         </p>
         <p>
-          Outside of personal projects, I&apos;ve led teams doing technical work for
-          real clients at a club in uni.
+          Outside of personal projects, I&apos;ve led teams doing technical work for real clients at a club in uni.
         </p>
       </div>
 

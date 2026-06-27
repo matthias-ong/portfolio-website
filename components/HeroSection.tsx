@@ -76,7 +76,7 @@ export default function HeroSection() {
           variants={fadeUp}
           className="mb-10 text-lg leading-relaxed text-zinc-600 dark:text-zinc-400"
         >
-          I build web apps and AI-powered tools for myself and clients. Final year IT student, based in Perth. Currently looking for work.
+          I build full-stack apps and AI-powered tools for myself and clients. Final year IT student, based in Perth. Currently looking for work.
         </motion.p>
 
         <motion.div

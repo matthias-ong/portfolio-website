@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Blog — Matthias Ong",
+  title: "Blog - Matthias Ong",
   description: "Writing on AI, full-stack development, and building products.",
 }
 

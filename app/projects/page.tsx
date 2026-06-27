@@ -3,7 +3,7 @@ import { projects } from "@/data/projects"
 import ProjectsClient from "@/components/ProjectsClient"
 
 export const metadata = {
-  title: "Projects — Matthias Ong",
+  title: "Projects - Matthias Ong",
   description: "Client work and personal projects by Matthias Ong.",
 }
 

@@ -11,7 +11,7 @@ const geist = Geist({
 })
 
 export const metadata: Metadata = {
-  title: "Matthias Ong — AI & Full-Stack Engineer",
+  title: "Matthias Ong - AI & Full-Stack Engineer",
   description: "Portfolio of Matthias Ong. Building AI-powered products and full-stack applications.",
 }
 

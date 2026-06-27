@@ -3,7 +3,7 @@ import ContactForm from "@/components/ContactForm"
 import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa"
 
 export const metadata: Metadata = {
-  title: "Contact — Matthias Ong",
+  title: "Contact - Matthias Ong",
   description: "Get in touch with Matthias Ong.",
 }
 
