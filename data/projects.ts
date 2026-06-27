@@ -162,6 +162,19 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    slug: "iconoclasm",
+    title: "Iconoclasm - Custom C++ 3D Game Engine & RPG",
+    period: "Apr 2022 – Apr 2023",
+    role: "Developer (team of 10)",
+    description:
+      "Built a custom C++ 3D game engine and a hack-and-slash RPG on top of it with a 10-person cross-functional team of programmers, designers, and animators running Scrum with biweekly sprints. I worked on core engine systems, building an Entity-Component-System (ECS) architecture, integrating PhysX for 3D physics simulation, and implementing custom bounding-volume models for collision detection. On the rendering and tooling side I built the OpenGL/GLSL shader pipeline, FreeType text rendering, and an ImGui-based in-engine debugger that let the team inspect and tweak game state at runtime.",
+    skills: ["C++", "C#", "OpenGL", "GLSL", "PhysX", "ECS", "ImGui", "FreeType", "Game Engine Development", "Team Collaboration"],
+    categories: ["Full-Stack"],
+    images: [],
+    video: "/videos/engine_showcase.mp4",
+    featured: false,
+  },
+  {
     slug: "captainjumperboy",
     title: "CaptainJumperBoy",
     period: "Feb 2023",
