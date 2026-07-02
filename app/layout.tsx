@@ -21,13 +21,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${geist.variable} h-full antialiased`}>
+    <html lang="en" className={`${geist.variable} dark h-full antialiased`}>
       <body className="flex min-h-full flex-col bg-zinc-950 text-zinc-50">
         <StarField />
         <CursorGlow />
         <Navbar />
         <main className="flex flex-1 flex-col">{children}</main>
-        <footer className="border-t border-zinc-200 py-6 text-center text-sm text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+        <footer className="border-t border-zinc-800 py-6 text-center text-sm text-zinc-400">
           © {new Date().getFullYear()} Matthias Ong
         </footer>
       </body>

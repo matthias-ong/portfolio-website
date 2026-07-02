@@ -9,10 +9,10 @@ export default function BlogPage() {
       <p className="mb-3 text-sm font-medium uppercase tracking-widest text-zinc-400">
         Coming soon
       </p>
-      <h1 className="mb-4 text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
+      <h1 className="mb-4 text-3xl font-bold tracking-tight text-zinc-50">
         Blog
       </h1>
-      <p className="max-w-sm text-zinc-500 dark:text-zinc-400">
+      <p className="max-w-sm text-zinc-400">
         Writing on AI, full-stack development, and building products. Check back soon.
       </p>
     </div>

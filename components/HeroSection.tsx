@@ -43,7 +43,7 @@ export default function HeroSection() {
             alt="Matthias Ong"
             width={112}
             height={112}
-            className="mx-auto mb-6 rounded-full object-cover ring-2 ring-blue-200 dark:ring-blue-900"
+            className="mx-auto mb-6 rounded-full object-cover ring-2 ring-blue-900"
             style={{ width: 112, height: 112 }}
             priority
           />
@@ -58,7 +58,7 @@ export default function HeroSection() {
 
         <motion.h1
           variants={fadeUp}
-          className="mb-6 text-5xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-6xl"
+          className="mb-6 text-5xl font-bold tracking-tight text-zinc-50 sm:text-6xl"
         >
           {displayed}
           {!done && (
@@ -74,7 +74,7 @@ export default function HeroSection() {
 
         <motion.p
           variants={fadeUp}
-          className="mb-10 text-lg leading-relaxed text-zinc-600 dark:text-zinc-400"
+          className="mb-10 text-lg leading-relaxed text-zinc-400"
         >
           I build full-stack apps and AI-powered tools for myself and clients. Final year IT student, based in Perth. Currently looking for work.
         </motion.p>
@@ -106,7 +106,7 @@ export default function HeroSection() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="text-zinc-400 transition-colors hover:text-zinc-900 dark:hover:text-zinc-50"
+            className="text-zinc-400 transition-colors hover:text-zinc-50"
           >
             <FaGithub size={22} />
           </a>
@@ -115,7 +115,7 @@ export default function HeroSection() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="text-zinc-400 transition-colors hover:text-zinc-900 dark:hover:text-zinc-50"
+            className="text-zinc-400 transition-colors hover:text-zinc-50"
           >
             <FaLinkedin size={22} />
           </a>

@@ -20,21 +20,21 @@ export default function AboutPage() {
           alt="Matthias Ong"
           width={120}
           height={120}
-          className="rounded-full object-cover ring-2 ring-blue-200 dark:ring-blue-900"
+          className="rounded-full object-cover ring-2 ring-blue-900"
           style={{ width: 120, height: 120 }}
         />
         <div>
-          <h1 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
+          <h1 className="text-2xl font-bold tracking-tight text-zinc-50">
             Matthias Ong
           </h1>
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">Perth, WA · Open to work</p>
+          <p className="text-sm text-zinc-400">Perth, WA · Open to work</p>
           <div className="mt-2 flex gap-3">
             <a
               href="https://github.com/matthias-ong"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="text-zinc-400 transition-colors hover:text-zinc-900 dark:hover:text-zinc-50"
+              className="text-zinc-400 transition-colors hover:text-zinc-50"
             >
               <FaGithub size={18} />
             </a>
@@ -43,7 +43,7 @@ export default function AboutPage() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="text-zinc-400 transition-colors hover:text-zinc-900 dark:hover:text-zinc-50"
+              className="text-zinc-400 transition-colors hover:text-zinc-50"
             >
               <FaLinkedin size={18} />
             </a>
@@ -52,7 +52,7 @@ export default function AboutPage() {
       </div>
 
       {/* Bio */}
-      <div className="mb-10 space-y-4 text-zinc-600 dark:text-zinc-400">
+      <div className="mb-10 space-y-4 text-zinc-400">
         <p>
           I&apos;m a CS/IT student, finishing up my degree in Melbourne before moving to Perth. I love building AI-powered tools and full-stack apps along the way.
         </p>
@@ -69,7 +69,7 @@ export default function AboutPage() {
         <h2 className="mb-3 text-xs font-semibold uppercase tracking-widest text-zinc-400">
           Currently
         </h2>
-        <ul className="space-y-1 text-sm text-zinc-600 dark:text-zinc-400">
+        <ul className="space-y-1 text-sm text-zinc-400">
           <li>- Finishing my IT degree</li>
           <li>- Open to grad roles and freelance work in Perth (and remote)</li>
         </ul>
@@ -84,7 +84,7 @@ export default function AboutPage() {
           {interests.map((item) => (
             <span
               key={item}
-              className="rounded-full border border-zinc-200 px-3 py-1 text-sm text-zinc-600 dark:border-zinc-700 dark:text-zinc-400"
+              className="rounded-full border border-zinc-700 px-3 py-1 text-sm text-zinc-400"
             >
               {item}
             </span>
@@ -95,7 +95,7 @@ export default function AboutPage() {
       {/* CTA */}
       <Link
         href="/projects"
-        className="text-sm font-medium text-blue-600 hover:text-blue-500 dark:text-blue-400"
+        className="text-sm font-medium text-blue-400 hover:text-blue-300"
       >
         See my projects →
       </Link>
